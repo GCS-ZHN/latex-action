@@ -15,6 +15,8 @@ inputs:
     default: "-pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode"
   extra_system_packages:
     description: Install extra packages by apt-get
+  extra_font_packages:
+    description: Install fonts packaged in zip format
 runs:
   using: docker
   image: Dockerfile
@@ -24,6 +26,7 @@ runs:
     - ${{ inputs.compiler }}
     - ${{ inputs.args }}
     - ${{ inputs.extra_system_packages }}
+    - ${{ inputs.extra_font_packages }}
 branding:
   icon: book
   color: blue
