@@ -26,6 +26,14 @@ This actions runs on docker using a [maximal TeXLive environment](https://hub.do
 
     The extra packages to be installed by [`apt-get`](https://en.wikipedia.org/wiki/APT_(Package_Manager)) separated by space.
 
+* `extra_font_packages`
+
+    The extra fonts such as some chinese fonts, please package them as a ZIP format.
+    ```yaml
+    with:
+      extra_font_packages: fonts # means fonts.zip
+    ```
+
 ## Examples
 
 ### Build `main.tex` using `latexmk`
